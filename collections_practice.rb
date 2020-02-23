@@ -30,6 +30,23 @@ end
 
 def find_a(some_array)
   array2 = Array.new
-  some_array.each {|x| array2 << x.start_with?("a") }
-  
+  some_array.each do |x|
+    if x.start_with?("a")
+      array2 << x
+    end
+  end
+  return array2
+end
+
+def sum_array(some_array)
+  sum = 0
+  some_array.each { |a| sum+=a }
+  return sum
+end
+
+def add_s(some_array)
+  array2 = Array.new
+  some_array.each {|x| array2 << x + "s"}
+  array2[1] = "feet"
+  return array2
 end
